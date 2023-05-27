@@ -9,4 +9,11 @@
     <string name="start">Start</string>
     <string name="close">Close</string>
     <string name="about_college">R N S Institute of Technology (RNSIT) established in the year 2001, is the brainchild of the Group Chairman, Dr. R. N. Shetty. The institution was founded with a sole purpose of imparting quality education in Engineering, Technology and Management with a difference. RNSIT is a place where you get knowledge, friends for life, memories and a bright career.</string>
+
+    <string-array name="theme">
+        <item>System Default</item>
+        <item>Dark</item>
+        <item>Light</item>
+
+    </string-array>
 </resources>

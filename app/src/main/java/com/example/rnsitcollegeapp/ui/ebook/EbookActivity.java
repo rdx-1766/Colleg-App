@@ -8,10 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.rnsitcollegeapp.MainActivity;
 import com.example.rnsitcollegeapp.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,10 +31,16 @@ public class EbookActivity extends AppCompatActivity {
     private RecyclerView ebookRecycler;
     private DatabaseReference reference;
 
+    private LinearLayout shimmerLayout;
+
+    ShimmerFrameLayout shimmerFrameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ebook);
+
+        shimmerFrameLayout = findViewById(R.id.shimmer_view_container);
+        shimmerLayout = findViewById(R.id.shimmer_layout);
 
         getWindow().setStatusBarColor(ContextCompat.getColor(EbookActivity.this,R.color.darkblue));
 
@@ -58,6 +67,8 @@ public class EbookActivity extends AppCompatActivity {
                 adapter = new EbookAdapter(EbookActivity.this,list);
                 ebookRecycler.setLayoutManager(new LinearLayoutManager(EbookActivity.this));
                 ebookRecycler.setAdapter(adapter);
+                shimmerFrameLayout.stopShimmer();
+                shimmerLayout.setVisibility(View.GONE);
             }
 
             @Override
@@ -65,5 +76,17 @@ public class EbookActivity extends AppCompatActivity {
                 Toast.makeText(EbookActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        shimmerFrameLayout.stopShimmer();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        shimmerFrameLayout.startShimmer();
+        super.onResume();
     }
 }

@@ -29,10 +29,10 @@ public class AboutFragment extends Fragment {
 
 
         list = new ArrayList<>();
-        list.add(new BranchModel(R.drawable.ic_cs,"Computer Science","Good Branch"));
-        list.add(new BranchModel(R.drawable.ic_is,"Information Science","Good Branch"));
-        list.add(new BranchModel(R.drawable.ic_mech,"Mechanical Engineering","Good Branch"));
-        list.add(new BranchModel(R.drawable.ic_eee,"Electrical Engineering","Good Branch"));
+        list.add(new BranchModel(R.drawable.ic_cs,"Computer Science","Department is striving hard in realizing the vision of the institution by accomplishing the vision of the department by promoting excellence in teaching and covering the fundamentals of computer science"));
+        list.add(new BranchModel(R.drawable.ic_is,"Information Science","The department follows a quality procedure to prepare students to be industry ready and encourages them to pursue higher education. Department maintains higher academic standards with outcome based education, witnessing higher university results and ranks. More than 95% of students are placed in top companies with paid internships."));
+        list.add(new BranchModel(R.drawable.ic_mech,"Mechanical Engineering","Department has been consistently achieving 85-90% results in VTU examination. Mech Radiance is a department student forum under which technical & cultural activities are conducted annually."));
+        list.add(new BranchModel(R.drawable.ic_eee,"Electrical Engineering","The well qualified and committed staff, along with the students of the department are working with the vision of making the department one of the best in India in both formal and non-formal education, and offering various research opportunities and services in Electrical Engineering over the next decade. The department provides an excellent learning environment supported by quality teaching with skilled faculty."));
 
         adapter = new BranchAdapter(getContext(),list);
 
