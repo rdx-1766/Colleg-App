@@ -10,12 +10,14 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.rnsitcollegeapp.ui.ebook.EbookActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_ebook:
-                Toast.makeText(this, "Ebooks", Toast.LENGTH_SHORT).show();
+                 startActivity(new Intent(MainActivity.this, EbookActivity.class));
                 break;
 
             case R.id.navigation_theme:
