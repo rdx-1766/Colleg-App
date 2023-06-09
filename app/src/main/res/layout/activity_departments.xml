@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Departments">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkblue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSE"
+            android:textColor="@color/white"
+            android:fontFamily="@string/bold"
+            android:textSize="50dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/deptName"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About The Department"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:textSize="@dimen/title_size"
+            android:fontFamily="@string/bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="350dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_branch"
+                android:id="@+id/deptImg"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:text="This a good department"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/deptAbt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vision"
+                android:textSize="@dimen/title_size"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:fontFamily="@string/bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:text="Conquering technical frontiers in the field of Electronics and Communication."
+                android:id="@+id/deptVision"
+                android:gravity="left"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mission"
+                android:textSize="@dimen/title_size"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:fontFamily="@string/bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:text="The department promotes an intellectual and ethical environment in which the strengths and skills of Electronics Professionals will flourish by.
+
+Achieving and fostering excellence in core Electronics and Communication engineering with focus on the hardware, simulation and design.
+Pursuing Research, Development and Consultancy to achieve self sustenance.
+Preparing industry ready graduates by providing skill training and nurturing innovation and creativity"
+                android:id="@+id/deptMission"
+                android:gravity="left"
+                android:layout_margin="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOD's Message"
+                android:textSize="@dimen/title_size"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:fontFamily="@string/bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/orange"
+                android:layout_margin="15dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/deptHod"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:src="@drawable/faculty"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+
+                    android:textSize="@dimen/text_size"
+                    android:text="The department of Electronics and Communication Engineering was started in 2001 and is currently running B.E, M.Tech and Research programs. The Department has well qualified, committed and experienced Faculty members with an average experience of 15 years. The department has 35 faculty members, with 6 Professors and 3 Associate Professors
+
+The faculty members have a minimum qualification as MTech and 16 with Ph.D degree and 16 faculty are pursuing their PhD in various research areas of Electronics and Communication. The Department of ECE has been consistently securing university ranks from past five years and this has led to a goodwill about the college at the state level. In the last five years, a total of 28 student ranks, out of which 6 have been first ranks. The average performance of the student is around 85% in VTU exams. 90% of the students get placed in reputed companies with minimum package of 3.5 L pa and maximum package of 24 L pa.
+DR. VIPULA SINGH"
+                    android:id="@+id/deptHodMsg"
+                    android:textAlignment="center"
+                    android:layout_margin="15dp"/>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teaching Staff"
+                android:textSize="@dimen/title_size"
+                android:fontFamily="@string/bold"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deptStaff"
+            android:visibility="gone"
+            android:nestedScrollingEnabled="false"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/staffNoData">
+            <include layout="@layout/no_data_found"/>
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

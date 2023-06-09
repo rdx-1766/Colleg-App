@@ -22,8 +22,8 @@
         android:icon="@drawable/share"/>
 
     <item android:id="@+id/navigation_rate"
-        android:title="Rate Us"
-        android:icon="@drawable/review"/>
+        android:title="CGPA Calculator"
+        android:icon="@drawable/calculator"/>
 
     <item android:id="@+id/navigation_developer"
         android:title="Developers"

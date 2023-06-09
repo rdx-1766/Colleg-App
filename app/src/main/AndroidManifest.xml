@@ -15,6 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RNSITCollegeApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".CGPA"
+            android:exported="false" />
+        <activity
+            android:name=".Departments"
+            android:exported="false" />
         <activity
             android:name=".FullImageView"
             android:exported="false" />

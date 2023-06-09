@@ -7,6 +7,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -17,7 +18,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.MenuItem;
@@ -28,6 +31,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 
+import java.io.File;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -106,11 +110,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_video:
-                Toast.makeText(this, "Video Lectures", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Intent.ACTION_VIEW,   Uri.parse("https://www.youtube.com/@rnsitofficial8096")));
                 break;
 
             case R.id.navigation_rate:
-                Toast.makeText(this, "Rate us", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,CGPA.class);
+                startActivity(intent);
                 break;
 
             case R.id.navigation_ebook:
@@ -122,16 +127,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_website:
-                Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Intent.ACTION_VIEW,   Uri.parse("https://www.rnsit.ac.in/")));
                 break;
 
             case R.id.navigation_share:
-                Toast.makeText(this, "Share App", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Will be available Soon", Toast.LENGTH_SHORT).show();
                 break;
 
         }
         return true;
     }
+
+
 
     private void showDialog() {
         String[] themes = this.getResources().getStringArray(R.array.theme);

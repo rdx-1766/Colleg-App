@@ -2,17 +2,17 @@ package com.example.rnsitcollegeapp.ui.home;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.SlidingDrawer;
+import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.rnsitcollegeapp.Departments;
 import com.example.rnsitcollegeapp.R;
 import com.example.rnsitcollegeapp.SliderAdapter;
 import com.example.rnsitcollegeapp.SliderData;
@@ -25,14 +25,18 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
 
     private SliderView sliderView;
+    private TextView cs,is,mech,eee;
     private ImageView map;
     String url1 = "https://www.rnsit.ac.in/wp-content/themes/twentyseventeen/img/d.jpg";
     String url2 = "https://www.rnsit.ac.in/wp-content/themes/twentyseventeen/img/a.jpg";
     String url3 = "https://www.rnsit.ac.in/wp-content/themes/twentyseventeen/img/c.jpg";
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         sliderView = view.findViewById(R.id.slider);
@@ -62,8 +66,46 @@ public class HomeFragment extends Fragment {
 
         sliderView.startAutoCycle();
 
+        cs = view.findViewById(R.id.cse);
+        is = view.findViewById(R.id.is);
+        mech = view.findViewById(R.id.mech);
+        eee = view.findViewById(R.id.eee);
 
+        cs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplication(),Departments.class);
+                intent.putExtra("dept","Computer Science");
+                startActivity(intent);
+            }
+        });
 
+        is.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplication(),Departments.class);
+                intent.putExtra("dept","Information Science");
+                startActivity(intent);
+            }
+        });
+
+        mech.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplication(),Departments.class);
+                intent.putExtra("dept","Mechanical");
+                startActivity(intent);
+            }
+        });
+
+        eee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity().getApplication(),Departments.class);
+                intent.putExtra("dept","Electrical");
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

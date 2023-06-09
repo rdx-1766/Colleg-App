@@ -84,6 +84,7 @@
                               android:fontFamily="@string/regular"
                               android:text="Computer Science"
                               android:textColor="@color/textColor"
+                              android:id="@+id/cse"
                               android:textSize="@dimen/title_size2" />
 
                           <View
@@ -97,6 +98,7 @@
                               android:layout_gravity="center_horizontal"
                               android:layout_margin="8dp"
                               android:layout_marginTop="36dp"
+                              android:id="@+id/is"
                               android:fontFamily="@string/regular"
                               android:text="Information Science"
                               android:textColor="@color/textColor"
@@ -113,6 +115,7 @@
                               android:layout_gravity="center_horizontal"
                               android:layout_margin="8dp"
                               android:layout_marginTop="36dp"
+                              android:id="@+id/mech"
                               android:fontFamily="@string/regular"
                               android:text="Mechanical Engineering"
                               android:textColor="@color/textColor"
@@ -129,6 +132,7 @@
                               android:layout_gravity="center_horizontal"
                               android:layout_margin="8dp"
                               android:layout_marginTop="36dp"
+                              android:id="@+id/eee"
                               android:fontFamily="@string/regular"
                               android:text="Electical Engineering"
                               android:textColor="@color/textColor"
