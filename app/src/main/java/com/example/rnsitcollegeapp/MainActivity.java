@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.navigation_developer:
-                Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,Developers.class));
                 break;
 
             case R.id.navigation_video:
@@ -124,6 +124,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.navigation_theme:
                 showDialog();
+                break;
+
+            case R.id.navigation_roadmap:
+                startActivity(new Intent(MainActivity.this,Roadmap.class));
                 break;
 
             case R.id.navigation_website:

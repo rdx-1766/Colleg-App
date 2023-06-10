@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Developers">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#a4c639"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageDeveloper1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/darkblue"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/harikrishna" />
+
+        <TextView
+            android:id="@+id/nameDeveloper1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:text="Harikrishna R"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/departmentDeveloper1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computer Science and Engineering"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/collegeDeveloper1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rns Institute of Technology"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/linkedinIconDeveloper1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/linkedin" />
+
+            <ImageView
+                android:id="@+id/githubIconDeveloper1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/github"
+                android:layout_marginStart="16dp" />
+
+            <ImageView
+                android:id="@+id/instagramIconDeveloper1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/instagram"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Developer 2's details -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageDeveloper2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="75dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/darkblue"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/pavan" />
+
+        <TextView
+            android:id="@+id/nameDeveloper2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Pavan Kumar M"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/departmentDeveloper2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Computer Science and Engineering"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/collegeDeveloper2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rns Institute of Technology"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/linkedinIconDeveloper2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/linkedin" />
+
+            <ImageView
+                android:id="@+id/githubIconDeveloper2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/github"
+                android:layout_marginStart="16dp" />
+
+            <ImageView
+                android:id="@+id/instagramIconDeveloper2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/instagram"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

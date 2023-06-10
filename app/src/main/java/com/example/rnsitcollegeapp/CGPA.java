@@ -39,6 +39,15 @@ public class CGPA extends AppCompatActivity {
         editTextSem7 = findViewById(R.id.editTextSem7);
         editTextSem8 = findViewById(R.id.editTextSem8);
 
+        editTextSem1.setText("0");
+        editTextSem2.setText("0");
+        editTextSem3.setText("0");
+        editTextSem4.setText("0");
+        editTextSem5.setText("0");
+        editTextSem6.setText("0");
+        editTextSem7.setText("0");
+        editTextSem8.setText("0");
+
         // Initialize Button and TextView
         buttonCalculate = findViewById(R.id.buttonCalculate);
         textViewResult = findViewById(R.id.textViewResult);
