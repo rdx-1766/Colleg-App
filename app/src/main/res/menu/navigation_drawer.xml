@@ -25,6 +25,10 @@
         android:title="Domain Roadmap"
         android:icon="@drawable/roadmap"/>
 
+    <item android:id="@+id/navigation_projects"
+        android:title="Best Projects"
+        android:icon="@drawable/projects"/>
+
     <item android:id="@+id/navigation_rate"
         android:title="CGPA Calculator"
         android:icon="@drawable/calculator"/>

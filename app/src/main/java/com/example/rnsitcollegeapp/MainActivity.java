@@ -134,6 +134,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(Intent.ACTION_VIEW,   Uri.parse("https://www.rnsit.ac.in/")));
                 break;
 
+            case R.id.navigation_projects:
+                startActivity(new Intent(MainActivity.this,Projects.class));
+                break;
+
             case R.id.navigation_share:
                 Toast.makeText(this, "Will be available Soon", Toast.LENGTH_SHORT).show();
                 break;
