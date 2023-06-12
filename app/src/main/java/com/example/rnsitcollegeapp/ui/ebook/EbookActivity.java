@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.rnsitcollegeapp.MainActivity;
+import com.example.rnsitcollegeapp.Projects;
 import com.example.rnsitcollegeapp.R;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -44,9 +46,10 @@ public class EbookActivity extends AppCompatActivity {
 
         getWindow().setStatusBarColor(ContextCompat.getColor(EbookActivity.this,R.color.darkblue));
 
+        getWindow().setStatusBarColor(ContextCompat.getColor(EbookActivity.this,R.color.darkblue));
         if(getSupportActionBar()!=null) {
-            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-            getSupportActionBar().setTitle("RNSIT");
+            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.darkblue)));
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>EBooks</font>"));
         }
 
         ebookRecycler = findViewById(R.id.ebookRecycler);

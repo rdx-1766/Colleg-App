@@ -41,7 +41,7 @@ public class Projects extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Projects.this,R.color.darkblue));
         if(getSupportActionBar()!=null) {
             (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.darkblue)));
-            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Best Projects</font>"));
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Project Details</font>"));
         }
 
         projectNoData = findViewById(R.id.projectNoData);
@@ -53,7 +53,9 @@ public class Projects extends AppCompatActivity {
 
     private void getProjects() {
 
-        dbRef = reference.child("Projects");
+        String category = getIntent().getExtras().get("category").toString();
+        String title = getIntent().getExtras().get("ptitle").toString();
+        dbRef = reference.child("Projects").child(category).child(title);
 
         dbRef.addValueEventListener(new ValueEventListener() {
 
@@ -66,11 +68,15 @@ public class Projects extends AppCompatActivity {
                 }else{
                     projectNoData.setVisibility(View.GONE);
                     projects.setVisibility(View.VISIBLE);
-                    for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        ProjectData data = dataSnapshot.getValue(ProjectData.class);
-                        data.setPdes(dataSnapshot.child("pdesc").getValue().toString());
+                        ProjectData data = snapshot.getValue(ProjectData.class);
+                        data.setPdes(snapshot.child("pdesc").getValue().toString());
+                        if(!snapshot.child("demo").exists()){
+                            data.setDemo("--NOT AVAILABLE--");
+                        }
+                        if(!snapshot.child("future").exists()){
+                            data.setFuture("--NOT AVAILABLE--");
+                        }
                         list.add(data);
-                    }
                     projects.setHasFixedSize(true);
                     projects.setLayoutManager(new LinearLayoutManager(Projects.this));
                     adapter = new ProjectAdapter(list,Projects.this);

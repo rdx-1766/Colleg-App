@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,8 +26,8 @@ public class CGPA extends AppCompatActivity {
 
         getWindow().setStatusBarColor(ContextCompat.getColor(CGPA.this,R.color.darkblue));
         if(getSupportActionBar()!=null) {
-            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-            getSupportActionBar().setTitle("CGPA Calculator");
+            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.darkblue)));
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>CGPA Calculator</font>"));
         }
 
         // Initialize EditText fields

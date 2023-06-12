@@ -16,6 +16,12 @@
         android:theme="@style/Theme.RNSITCollegeApp"
         tools:targetApi="31">
         <activity
+            android:name=".ProjectList"
+            android:exported="false" />
+        <activity
+            android:name=".ProjectCatalog"
+            android:exported="false" />
+        <activity
             android:name=".Projects"
             android:exported="false" />
         <activity

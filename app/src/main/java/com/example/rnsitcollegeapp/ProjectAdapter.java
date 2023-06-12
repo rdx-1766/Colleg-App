@@ -44,9 +44,22 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
         holder.title_text.setText(item.getPtitle());
         holder.developer.setText(item.getPdeveloper());
         holder.description.setText(item.getPdes());
+        holder.lang.setText(item.getLang());
+        holder.future.setText(item.getFuture());
+        holder.features.setText(item.getFeatures());
+        holder.demolink.setText(item.getDemo());
+        holder.ps.setText(item.getPs());
 
         String link = item.getPlink().toString();
         String report = item.getPdfUrl();
+
+
+        holder.demolink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.getContext().startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse(holder.demolink.getText().toString())));
+            }
+        });
 
 
         holder.link.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +88,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
 
     public class ProjectViewAdapter extends RecyclerView.ViewHolder {
 
-        private TextView title_text,developer,description;
+        private TextView title_text,developer,description,future,features,demolink,ps,lang;
         private LinearLayout link;
 
         private Button report_button;
@@ -88,6 +101,12 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ProjectV
             description = itemView.findViewById(R.id.description);
             link = itemView.findViewById(R.id.link);
             report_button = itemView.findViewById(R.id.report_button);
+
+            future = itemView.findViewById(R.id.future);
+            features = itemView.findViewById(R.id.features);
+            demolink = itemView.findViewById(R.id.demolink);
+            ps = itemView.findViewById(R.id.ps);
+            lang = itemView.findViewById(R.id.lang);
 
         }
     }

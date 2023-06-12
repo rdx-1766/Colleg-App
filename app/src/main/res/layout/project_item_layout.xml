@@ -29,6 +29,63 @@
             android:textColor="@color/darkblue"/>
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Problem Statement"
+            android:textSize="@dimen/title_size2"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/ps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Problem Statement"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Features"
+            android:textSize="@dimen/title_size2"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Features"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Languages Used"
+            android:textSize="@dimen/title_size2"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="languages"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
             android:id="@+id/developer_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +101,25 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Pavan Kumar"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Project Link"
+            android:textSize="@dimen/title_size2"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/demolink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="demo link"
             android:textColor="@color/textColor"
             android:textSize="@dimen/text_size"
             android:layout_marginLeft="15dp"/>
@@ -67,6 +143,27 @@
             android:textSize="@dimen/text_size"
             android:textColor="@color/textColor"
             android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Future Enhancements"
+            android:textSize="@dimen/title_size2"
+            android:textColor="@color/darkblue"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/future"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="future enhancements"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="15dp"/>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"

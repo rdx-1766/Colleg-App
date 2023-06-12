@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             case R.id.navigation_projects:
-                startActivity(new Intent(MainActivity.this,Projects.class));
+                startActivity(new Intent(MainActivity.this,ProjectCatalog.class));
                 break;
 
             case R.id.navigation_share:

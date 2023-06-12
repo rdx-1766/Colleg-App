@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -46,7 +47,7 @@ public class Departments extends AppCompatActivity {
         getWindow().setStatusBarColor(ContextCompat.getColor(Departments.this,R.color.darkblue));
         if(getSupportActionBar()!=null) {
             (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-            getSupportActionBar().setTitle("RNSIT");
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Departments</font>"));
         }
 
         Bundle extras = getIntent().getExtras();
