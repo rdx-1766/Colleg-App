@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import android.text.Html;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,48 +20,54 @@ public class CGPA extends AppCompatActivity {
     private EditText editTextSem1, editTextSem2, editTextSem3, editTextSem4, editTextSem5, editTextSem6, editTextSem7, editTextSem8;
     private Button buttonCalculate;
     private TextView textViewResult;
+    private WebView webview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cgpa);
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(CGPA.this,R.color.darkblue));
+        getWindow().setStatusBarColor(ContextCompat.getColor(CGPA.this,R.color.orange));
         if(getSupportActionBar()!=null) {
-            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.darkblue)));
+            (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
             getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>CGPA Calculator</font>"));
         }
 
         // Initialize EditText fields
-        editTextSem1 = findViewById(R.id.editTextSem1);
-        editTextSem2 = findViewById(R.id.editTextSem2);
-        editTextSem3 = findViewById(R.id.editTextSem3);
-        editTextSem4 = findViewById(R.id.editTextSem4);
-        editTextSem5 = findViewById(R.id.editTextSem5);
-        editTextSem6 = findViewById(R.id.editTextSem6);
-        editTextSem7 = findViewById(R.id.editTextSem7);
-        editTextSem8 = findViewById(R.id.editTextSem8);
+//        editTextSem1 = findViewById(R.id.editTextSem1);
+//        editTextSem2 = findViewById(R.id.editTextSem2);
+//        editTextSem3 = findViewById(R.id.editTextSem3);
+//        editTextSem4 = findViewById(R.id.editTextSem4);
+//        editTextSem5 = findViewById(R.id.editTextSem5);
+//        editTextSem6 = findViewById(R.id.editTextSem6);
+//        editTextSem7 = findViewById(R.id.editTextSem7);
+//        editTextSem8 = findViewById(R.id.editTextSem8);
+//
+//        editTextSem1.setText("0");
+//        editTextSem2.setText("0");
+//        editTextSem3.setText("0");
+//        editTextSem4.setText("0");
+//        editTextSem5.setText("0");
+//        editTextSem6.setText("0");
+//        editTextSem7.setText("0");
+//        editTextSem8.setText("0");
+//
+//        // Initialize Button and TextView
+//        buttonCalculate = findViewById(R.id.buttonCalculate);
+//        textViewResult = findViewById(R.id.textViewResult);
+//
+//        // Set OnClickListener for the Calculate button
+//        buttonCalculate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                calculateCGPA();
+//            }
+//        });
 
-        editTextSem1.setText("0");
-        editTextSem2.setText("0");
-        editTextSem3.setText("0");
-        editTextSem4.setText("0");
-        editTextSem5.setText("0");
-        editTextSem6.setText("0");
-        editTextSem7.setText("0");
-        editTextSem8.setText("0");
-
-        // Initialize Button and TextView
-        buttonCalculate = findViewById(R.id.buttonCalculate);
-        textViewResult = findViewById(R.id.textViewResult);
-
-        // Set OnClickListener for the Calculate button
-        buttonCalculate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculateCGPA();
-            }
-        });
+        webview  = (WebView) this.findViewById(R.id.webview);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.setWebViewClient(new WebViewClient());
+        webview.loadUrl("https://calc.takeiteasyengineers.com/");
     }
 
     private void calculateCGPA() {

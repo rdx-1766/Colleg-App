@@ -37,4 +37,8 @@
         android:title="Developers"
         android:icon="@drawable/developer"/>
 
+    <item android:id="@+id/navigation_queries"
+        android:title="Qureries"
+        android:icon="@drawable/queries"/>
+
 </menu>

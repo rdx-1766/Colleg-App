@@ -9,8 +9,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.Html;
 
 import com.example.rnsitcollegeapp.MainActivity;
+import com.example.rnsitcollegeapp.NotificationsActivity;
 import com.example.rnsitcollegeapp.R;
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -34,11 +36,10 @@ public class PdfViewerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_viewer);
 
-        getWindow().setStatusBarColor(ContextCompat.getColor(PdfViewerActivity.this,R.color.darkblue));
-
+        getWindow().setStatusBarColor(ContextCompat.getColor(PdfViewerActivity.this,R.color.orange));
         if(getSupportActionBar()!=null) {
             (getSupportActionBar()).setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-            getSupportActionBar().setTitle("RNSIT");
+            getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>RNSIT</font>"));
         }
 
         url = getIntent().getStringExtra("pdfUrl");

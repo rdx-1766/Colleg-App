@@ -142,6 +142,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Will be available Soon", Toast.LENGTH_SHORT).show();
                 break;
 
+            case R.id.navigation_queries:
+                startActivity(new Intent(MainActivity.this,NotificationsActivity.class));
+                break;
+
         }
         return true;
     }

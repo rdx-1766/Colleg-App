@@ -44,13 +44,14 @@
             android:textSize="50sp"
             android:fontFamily="@string/bold"
             android:text="RNSIT"
-            android:textColor="@color/darkblue"/>
+            android:textColor="@color/darkvoilet"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:textSize="20dp"
+            android:textColor="@color/darkvoilet"
             android:fontFamily="@string/regular"
             android:text="Bengaluru"/>
 
